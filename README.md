@@ -1,4 +1,4 @@
-# Veltix
+# Veltix Support Intelligence
 
 Veltix is a full-stack support inbox analytics dashboard built as a portfolio project. It simulates the customer support inbox of a fictional B2B project management SaaS, then uses an LLM to extract structured insight (category, sentiment, urgency, summary, and more) from raw email text, and surfaces it in a live dashboard.
 
@@ -65,8 +65,8 @@ The FastAPI backend exposes four endpoints (`/health`, `/stats`, `/emails`, `/em
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/veltix.git
-cd veltix
+git clone https://github.com/BendotLabs/Veltix-Support-Intelligence.git
+cd Veltix-Support-Intelligence
 ```
 
 ### 2. Backend setup
