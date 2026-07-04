@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+data/emails.json
+data/emails_enriched.json
+venv/
+.venv/
+node_modules/
+*.db
+dist/

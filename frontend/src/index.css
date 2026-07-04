@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* ─── Color system ───────────────────────────────────────── */
+/* Light mode */
+:root {
+  --bg-base:       #f4f5f7;
+  --bg-surface:    #ffffff;
+  --bg-elevated:   #ffffff;
+  --border:        #e2e5ea;
+
+  --text-primary:  #111827;
+  --text-secondary:#4b5563;
+  --text-muted:    #9ca3af;
+
+  --accent-blue:   #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-teal:   #14b8a6;
+  --accent-amber:  #f59e0b;
+  --accent-red:    #ef4444;
+  --accent-green:  #22c55e;
+
+  --urgency-critical: #ef4444;
+  --urgency-high:     #f59e0b;
+  --urgency-medium:   #3b82f6;
+  --urgency-low:      #22c55e;
+
+  --sentiment-positive: #22c55e;
+  --sentiment-neutral:  #9ca3af;
+  --sentiment-negative: #ef4444;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.10);
+
+  --radius: 10px;
+  --transition: 150ms ease;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --bg-base:       #0f1117;
+  --bg-surface:    #1a1d27;
+  --bg-elevated:   #22263a;
+  --border:        #2e3349;
+
+  --text-primary:  #f0f2ff;
+  --text-secondary:#9aa3c2;
+  --text-muted:    #555e7a;
+
+  --accent-blue:   #60a5fa;
+  --accent-purple: #a78bfa;
+  --accent-teal:   #2dd4bf;
+  --accent-amber:  #fbbf24;
+  --accent-red:    #f87171;
+  --accent-green:  #4ade80;
+
+  --urgency-critical: #f87171;
+  --urgency-high:     #fbbf24;
+  --urgency-medium:   #60a5fa;
+  --urgency-low:      #4ade80;
+
+  --sentiment-positive: #4ade80;
+  --sentiment-neutral:  #555e7a;
+  --sentiment-negative: #f87171;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.5);
+}
+
+/* ─── Base ───────────────────────────────────────────────── */
+html { font-size: 16px; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.5;
+  transition: background var(--transition), color var(--transition);
+  min-height: 100vh;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ─── Pulse animation (used by Header status dot) ────────── */
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-green) 60%, transparent); }
+  70%  { box-shadow: 0 0 0 6px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+.animate-pulse-dot {
+  animation: pulse 2.5s ease-out infinite;
+}

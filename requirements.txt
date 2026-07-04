@@ -1,0 +1,5 @@
+faker
+groq
+python-dotenv
+fastapi
+uvicorn
